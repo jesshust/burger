@@ -7,12 +7,13 @@ var connection;
 if (process.env.JAWSDB_URL){
 	connection = mysql.createConnection(process.env.JAWSDB_URL); 
 } else {
-	connection = mysql.createConnection ('burgers_db', 'root', {	 
+	connection = mysql.createConnection ({	 
 	host: process.env.db_host || 'localhost', 
+	user: process.env.db_user || 'root', 
 	password: process.env.db_pw || '',
-	port: '3306'
-  })
-}  
+	database: process.env.db || 'burgers_db'
+	})
+};  
 
 connection.connect(); 
 
