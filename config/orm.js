@@ -25,8 +25,6 @@ function objToSql(ob){
 	return arr.toString(); 
 }
 
-// var tableName = 'allburgers'; 
-
 var orm = {
 
 	//query that selects all 
