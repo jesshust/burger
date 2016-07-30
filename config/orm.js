@@ -39,12 +39,12 @@ var orm = {
 		
 	}, 
 	//query that inserts a new burger
-	InsertOne: function(table, cols, vals, cb){
+	insertOne: function(table, cols, vals, cb){
 		var queryString ='INSERT INTO ' + table; 
 
 		queryString = queryString + ' ('; 
 		queryString = queryString + cols.toString(); 
-		queryString = queryString + 'VALUES ('; 
+		queryString = queryString + ') VALUES ('; 
 		queryString = queryString + printQuestionMarks(vals.length); 
 		queryString = queryString + ') '; 
 
