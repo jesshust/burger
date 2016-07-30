@@ -24,7 +24,7 @@
     "url": "https://github.com/jesshust/burger/issues"
   },
   "engines": {
-    "node": "4.4.7"
+    "node": "5.10.1"
   }, 
   "homepage": "https://github.com/jesshust/burger#readme",
   "dependencies": {
