@@ -12,7 +12,7 @@ if (process.env.JAWSDB_URL){
 	user: process.env.db_user || 'root', 
 	password: process.env.db_pw || '',
 	database: process.env.db || 'burgers_db'
-	});
+	})
 };  
 
 connection.connect(); 
