@@ -3,11 +3,24 @@ var orm = require('../config/orm.js');
 
 var burger = {
 
-	all: function(selectAll){
-		orm.all('burgers', function(res){
-			selectAll(res); 
+	selectAll: function(cb){
+		orm.selectAll('burgers', function(res){
+			cb(res); 
 		}); 
 	}, 
 
-	insert: function(insertOne)
-}
+	//cols and vals are arrays
+	insertOne: function(cols, vals, cb){
+		orm.insertOne('burgers', cols, vals, function(res){
+			cb(res); 
+		}); 
+	}, 
+
+	updateOne: function(objColVals, condition, cb){
+		orm.updateOne('burgers', objColVals, condition, function(res){
+			cb(res); 
+		}); 
+	}
+}; 
+
+module.exports = burger;
